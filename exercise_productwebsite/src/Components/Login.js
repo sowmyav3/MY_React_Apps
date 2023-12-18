@@ -1,8 +1,9 @@
 import React from 'react';
 import '../LoginForm.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 function Login() {
     const [email, setemail] = useState('');
     const [disabled,setdisabled]= useState("true");
@@ -56,6 +57,7 @@ function Login() {
                     </div>
                     <button type="submit" classname="btn btn-success w-100 mt-2" onClick={loginhandler}>LOG In</button>
                     <p>New User <Link to="/Register">Register</Link></p>
+                    
                 </form>
             </div>
         </div>
