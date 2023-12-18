@@ -6,14 +6,14 @@ import Contact from './Components/Contact';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import './Pictures';
+
 function App() {
   return (
 
     <div>
-      <img src="/Pictures/WebisteIcon.jpg" alt="website"></img>
+      <img src="" alt="website"></img>
       <Router>
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs"> 
           <li class="nav-item">
           <Link to="/">Home</Link>
           </li>
