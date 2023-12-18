@@ -6,12 +6,12 @@ import Contact from './Components/Contact';
 import Login from './Components/Login';
 import Register from './Components/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+// import './Pictures';
 function App() {
   return (
 
     <div>
-      <img src="C:\Users\HP\Desktop\React\React_Demo\MY_React_Apps\exercise_productwebsite\src\Images\WebisteIcon.jpg" alt="website"></img>
+      <img src="/Pictures/WebisteIcon.jpg" alt="website"></img>
       <Router>
         <ul class="nav nav-tabs">
           <li class="nav-item">
