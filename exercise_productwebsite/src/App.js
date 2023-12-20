@@ -11,7 +11,7 @@ function App() {
   return (
 
     <div>
-      <img src="./Assets/CompanyLogo.jpg" alt="website"></img>
+      
       <Router>
         <ul className="nav nav-tabs"> 
           <li className="nav-item">
