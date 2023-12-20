@@ -11,22 +11,22 @@ function App() {
   return (
 
     <div>
-      <img src="" alt="website"></img>
+      <img src="./Assets/CompanyLogo.jpg" alt="website"></img>
       <Router>
-        <ul class="nav nav-tabs"> 
-          <li class="nav-item">
+        <ul className="nav nav-tabs"> 
+          <li className="nav-item">
           <Link to="/">Home</Link>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
           <Link to="/products">products</Link>
           </li>
-          <li class="nav-item">
+          <li className="nav-item">
           <Link to="/contact">Contact_Us</Link>
           </li>
-          <li class="nav-item ">
+          <li className="nav-item ">
           <Link to="/login">Login</Link>
           </li>
-          <li class="nav-item ">
+          <li className="nav-item ">
           <Link to="/Register">Register</Link>
           </li>
         </ul>
