@@ -33,34 +33,42 @@ function Login() {
     }
 
     return (
-        <div className='wrapper d-flex align-items-center justify-content-center w-100 bg-secondary'>
-            <div className='login rounded'>
-                <h2 className='mb-3'>Login Form</h2>
-                <form className='needs-validation'>
-                    <div className='form-group was-validated mb-2'>
-                        <label htmlFor='email' className='form-label'>
-                            Email Address
-                        </label>
-                        <input type="email" className='form-control' onChange={emailhandleChange} value={email} required></input>
-                        <div className='invalid-feedback'>
-                            Please enter your email
-                        </div>
-                    </div>
-                    <div className='form-group was-validated mb-2' >
-                        <label htmlFor='password' className='form-label'>
-                            Password
-                        </label>
-                        <input type="password" className='form-control' onChange={PasswordhandleChange} value={password} required></input>
-                        <div className='invalid-feedback'>
-                            Please enter your password
-                        </div>
-                    </div>
-                    <button type="submit" classname="btn btn-success w-100 mt-2" onClick={loginhandler}>LOG In</button>
-                    <p>New User <Link to="/Register">Register</Link></p>
-                    
-                </form>
+        <div className='loginpage'>
+            <div className=' wrapper  justify-content-center w-100'>
+                <p className='loginContent1'>
+                    loginPage
+                </p>
             </div>
         </div>
+        // <div className=' wrapper d-flex align-items-center justify-content-center w-100'>
+            
+        //     <div className='login rounded'>
+        //         <h2 className='mb-3'>Login Form</h2>
+        //         <form className='needs-validation'>
+        //             <div className='form-group was-validated mb-2'>
+        //                 <label htmlFor='email' className='form-label'>
+        //                     Email Address
+        //                 </label>
+        //                 <input type="email" className='form-control' onChange={emailhandleChange} value={email} required></input>
+        //                 <div className='invalid-feedback'>
+        //                     Please enter your email
+        //                 </div>
+        //             </div>
+        //             <div className='form-group was-validated mb-2' >
+        //                 <label htmlFor='password' className='form-label'>
+        //                     Password
+        //                 </label>
+        //                 <input type="password" className='form-control' onChange={PasswordhandleChange} value={password} required></input>
+        //                 <div className='invalid-feedback'>
+        //                     Please enter your password
+        //                 </div>
+        //             </div>
+        //             <button type="submit" classname="btn btn-success w-100 mt-2" onClick={loginhandler}>LOG In</button>
+        //             <p>New User <Link to="/Register">Register</Link></p>
+                    
+        //         </form>
+        //     </div>
+        // </div>
     );
 }
 

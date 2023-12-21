@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -37,20 +38,31 @@
     transform: rotate(360deg);
   }
 }
+.loginpage{
+  background-image: url("../public/Assets/Login.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.loginContent1{
+  color: white;
+  font-size: 26px;
+  padding-left: 650px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif
 
+}
+.logo-img{
+  height: 65px;
+  width: 101px;
+  padding-top: 5px;
+  padding-left: 10px;
+}
+.logo-text{
+  margin-top: 33px;
+  font-size: 27px;
+  color: #C708CB;
+  padding-left: 8px;
+}
 
-/* :-webkit-any-link {
-  border-width: solid thin;
-  padding-left: 40px;
-  padding-top: 90px;
-  text-decoration: underline;
-  text-decoration-line: none;
-  text-decoration-thickness: 5px;
-  text-decoration-style: none;
-  text-decoration-color: black;
-  font-size: large;
-  
-} */
 
 .nav-tabs {
   background-color: rgb(174, 242, 242);
