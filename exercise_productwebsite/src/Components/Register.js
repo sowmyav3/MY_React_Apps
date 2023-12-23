@@ -1,6 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import '../App.css';
+import TextField from '@mui/material/TextField';
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
 function Register(props) {
     const [disabled, setdisabled] = useState("true");
     const [name, setName] = useState('');
@@ -48,65 +54,91 @@ function Register(props) {
             }
         }
     }
+    const Item = styled(Paper)(({ theme }) => ({
+        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#CFE9FF',
+        ...theme.typography.body2,
+        padding: theme.spacing(1),
+        textAlign: 'center',
+        backgroundColor: "transparent",
+    }));
 
     return (
-        <div>
-            <div className='wrapper bg-secondary d-flex align-items-center justify-content-center w-100'>
-                <div className='login rounded'>
-                    <h2 className='mb-3'>Register Form</h2>
-                    <form className='needs-validation'>
-                        <div className='form-group was-validated mb-2'>
-                            <label className='form-label'>
-                                Name
-                            </label>
-                            <input type="textbox" className='form-control' onChange={namehandleChange} value={name} required></input>
-                            <div className='invalid-feedback'>
-                                Please enter your full name
-                            </div>
-                        </div>
-                        <div className='form-group was-validated mb-2'>
-                            <label htmlFor='email' className='form-label'>
-                                Email Address
-                            </label>
-                            <input type="email" className='form-control' onChange={emailhandleChange} value={email} required></input>
-                            <div className='invalid-feedback'>
-                                Please enter your email
-                            </div>
-                        </div>
-                        <div className='form-group was-validated mb-2' >
-                            <label htmlFor='password' className='form-label' >
-                                Password
-                            </label>
-                            <input type="password" className='form-control' onChange={PasswordhandleChange} value={password} required></input>
-                            <div className='invalid-feedback'>
-                                Please enter your password
-                            </div>
-                        </div>
-                        <div className='form-group was-validated mb-2' >
-                            <label htmlFor='password' className='form-label'>
-                                Re-Enter Password
-                            </label>
-                            <input type="password" className='form-control' onChange={RePasswordhandleChange} value={repassword} required>
-                            </input>
+
+        <div className='registerpage'>
+            <div className=' wrapper  justify-content-center w-100'>
+                <span className='registerContent'>
+                    REGISTRATION PAGE
+                </span>
+                <Grid
+                    container
+                    sx={{marginTop:"14rem", marginLeft:"54rem"}}
+                >
+                    <Grid item >
+                        <Item>
                             <div>
-                                {
-                                    password === repassword ? (
-                                        <p>setpasscheck("matched")</p>
-                                    ) : (
-                                        <p>setpasscheck("not matched")</p>
-                                    )
-                                }
+                            <div>
+                                    <span className='register-text1'>Name:</span>
+
+                                    <TextField
+                                        required
+                                        id="filled-required"
+                                        placeholder='enter your full name'
+                                        onChange={namehandleChange} 
+                                        value={name}
+                                        
+                                    />
+                                </div>
+                                <br />
+                                <div>
+                                    <span className='register-text1'>Email:</span>
+
+                                    <TextField
+                                        required
+                                        id="filled-required"
+                                        onChange={emailhandleChange} 
+                                        value={email}
+                                    />
+                                </div>
+                                <br />
+                                <div>
+                                    <span className='register-text2'>Password:</span>
+                                    <TextField
+                                        required
+                                        id="filled-required"
+                                        type="password"
+                                        onChange={PasswordhandleChange} 
+                                        value={password}
+                                    />
+                                </div>
+                                <br />
+                                <div>
+                                    <span className='register-text2'>Password:</span>
+                                    <TextField
+                                        required
+                                        id="filled-required"
+                                        type="password"
+                                        placeholder='enter password again'
+                                        onChange={RePasswordhandleChange} 
+                                        value={repassword}
+                                    />
+                                </div>
+                                <Button sx={{ backgroundColor: "#095996", border: "2", margin: "17px", color: "white", width: "95px", marginLeft: "272px" }}
+                                    type="submit" 
+                                    onClick={Registerhandler}
+                                    >REGISTER</Button>
+                                <br/>
+                                <span className='register-user'>Already have an account :
+                                    <Link to="/login" className='register-log'>
+                                        Login
+                                    </Link>
+                                </span>
                             </div>
-                            <div className='invalid-feedback'>
-                                Please enter password again
-                            </div>
-                        </div>
-                        <button type="submit" classname="btn btn-success w-100 mt-2" onClick={Registerhandler}>Register</button>
-                        <p>Already Existing User <Link to="/login">sign in</Link></p>
-                    </form>
-                </div>
+                        </Item>
+
+                    </Grid>
+                </Grid>
             </div>
-        </div>
+        </div >
     );
 }
 

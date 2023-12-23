@@ -12,6 +12,7 @@ import Menu from "@mui/material/Menu";
 import { useNavigate } from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import Button from '@mui/material/Button';
+import TitleIcon from '@mui/material/Icon'
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -47,7 +48,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
         paddingLeft: `calc(1em + ${theme.spacing(4)})`,
         transition: theme.transitions.create('width'),
         [theme.breakpoints.up('sm')]: {
-            width: '12ch',
+            width: '27ch',
             '&:focus': {
                 width: '20ch',
             },
@@ -55,47 +56,47 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
     },
 }));
 
-// const navItems = ['Product', 'Login', 'Register'];
+const navItems = ['Product', 'Login', 'Register'];
 
 export default function Header() {
 
-    // const [anchorEl, setAnchorEl] = React.useState(null);
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
-    // const handleClick = (event) => {
-    //     setAnchorEl(event.currentTarget);
-    // };
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
 
-    // const handleClose = () => {
-    //     setAnchorEl(null);
-    // };
-    // let navigate = useNavigate();
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+    let navigate = useNavigate();
 
-    // const handleNavItemClick = (item) => {
-    //     navigate(`/${item.toLowerCase()}`);
-    //     handleClose();
-    // };
+    const handleNavItemClick = (item) => {
+        navigate(`/${item.toLowerCase()}`);
+        handleClose();
+    };
 
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position='fixed' color='rgb(174, 242, 242)'>
+        <Box sx={{ flexGrow: 1, marginBottom:"65px"}}>
+            <AppBar position='fixed' sx={{background:"#33ffff"}}>
                 <Toolbar>
                     <IconButton
                         size="large"
                         edge="start"
                         color="inherit"
                         aria-label="menu"
-                        // onClick={handleClick}
+                        onClick={handleClick}
                         sx={{ mr: 2, display: { sm: "none" } }}
                     >
                         <MenuIcon></MenuIcon>
                     </IconButton>
 
-                    <img  src="./Assets/Header/CompanyLogo.png" alt='companylogo'>
+                    <img onClick={() => navigate("/")} className="logo-img" src="./Assets/Header/CompanyLogo.png" alt='companylogo'>
                     </img>
 
                     <Typography variant="h6" noWrap component="div" 
-                    // onClick={() => navigate("/")} 
+                    onClick={() => navigate("/")} 
                     sx={{ flexGrow: 1, display: { xs: "initial", sm: "block" } }}>
                         <span className='logo-text'>BuyPro</span>
                     </Typography>
@@ -108,14 +109,15 @@ export default function Header() {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </Search>
-                    <ShoppingCartIcon sx={{ marginLeft: "auto" }} />
-                    {/* <Box sx={{ display: { xs: "none", sm: "flex" } }}>
+                    <ShoppingCartIcon sx={{ marginLeft: "40px", marginRight:"4px", color:"black"}} >Cart</ShoppingCartIcon>
+                    <TitleIcon sx={{paddingRight:"11px", fontSize:"1rem", color:"black"}}>Cart</TitleIcon>
+                    <Box sx={{ display: { xs: "none", sm: "flex" }}}>
                         {navItems.map((item) => (
-                            <Button key={item} style={{ marginRight: "4px" }} variant="outlined" size="small" sx={{ color: "inherit" }} onClick={() => handleNavItemClick(item)}>
+                            <Button key={item} style={{ marginRight: "7px", color:"black" }} variant="outlined" size="small" sx={{ color: "inherit" }} onClick={() => handleNavItemClick(item)}>
                                 {item}
                             </Button>
                         ))}
-                    </Box> */}
+                    </Box>
                     {/* <Button onClick={loginpage()} sx={{ marginLeft: "auto" }} variant='outlined'>
                         Login
                     </Button>
@@ -124,7 +126,7 @@ export default function Header() {
                     </Button> */}
                 </Toolbar>
             </AppBar>
-            {/* <Menu
+            <Menu
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
@@ -135,7 +137,7 @@ export default function Header() {
                         {item}
                     </MenuItem>
                 ))}
-            </Menu> */}
+            </Menu>
         </Box>
     );
 }

@@ -8,35 +8,20 @@ import Register from './Components/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./Components/Header";
 
+
 function App() {
   return (
 
     <div>
-      <Header></Header>
-        {/* <ul className="nav nav-tabs"> 
-          <li className="nav-item">
-          <Link to="/">Home</Link>
-          </li>
-          <li className="nav-item">
-          <Link to="/products">products</Link>
-          </li>
-          <li className="nav-item">
-          <Link to="/contact">Contact_Us</Link>
-          </li>
-          <li className="nav-item ">
-          <Link to="/login">Login</Link>
-          </li>
-          <li className="nav-item ">
-          <Link to="/Register">Register</Link>
-          </li>
-        </ul> */}
-        <Routes>
-          <Route exact path="/" Component={Home}></Route>
-          <Route path="/products" Component={Product}></Route>
-          <Route path="/contact" Component={Contact}></Route>
-          <Route path="/login" Component={Login}></Route>
-          <Route path="/register" Component={Register}></Route>
-        </Routes>
+      <Header />
+      
+      <Routes>
+        <Route exact path="/" Component={Home}></Route>
+        <Route path="/products" Component={Product}></Route>
+        <Route path="/contact" Component={Contact}></Route>
+        <Route path="/login" Component={Login}></Route>
+        <Route path="/register" Component={Register}></Route>
+      </Routes>
     </div>
   );
 }
