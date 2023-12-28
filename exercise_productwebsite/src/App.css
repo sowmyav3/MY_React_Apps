@@ -203,6 +203,13 @@
   padding-right: 67px;
 }
 
+.d-flex p{
+  font-size: 18px;
+  padding-left: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
 
 #filled-required {
   box-shadow: 'none';

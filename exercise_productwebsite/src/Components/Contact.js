@@ -1,6 +1,5 @@
 import React from 'react';
 import { useState } from 'react';
-
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
@@ -133,22 +132,22 @@ function Contact(props) {
                         backgroundColor: "#5FB2F0",
                     }}>
                         <span className='contact-content1'>Contact us</span>
-                        <div className='mt-4'style={{marginLeft:"1rem"}}>
+                        <div style={{marginLeft:"1rem", marginTop:"3rem"}}>
                              <div className='d-flex'>
-                                 <LocationOnIcon fontSize='small' ></LocationOnIcon>
-                                 <p >Address: hyderabad</p>
+                                 
+                                 <p><LocationOnIcon fontSize='small'  sx={{paddingRight:"1rem"}}/>Address: hyderabad</p>
                              </div>
                              <div className='d-flex'>
-                                 <LocalPhoneIcon fontSize='small'/>
-                                 <p>Contact :- +91 8988276599</p>
+                                 
+                                 <p><LocalPhoneIcon fontSize='small' sx={{paddingRight:"1rem"}}/> Contact :- +91 8988276599</p>
                              </div>
                              <div className='d-flex'>
-                                 <EmailIcon fontSize='small'/>
-                                 <p>Email:- Contact@gmail.com</p>
+                                 
+                                 <p><EmailIcon fontSize='small' sx={{paddingRight:"1rem"}}/> Email:- Contact@gmail.com</p>
                              </div>
                              <div className='d-flex'>
-                                 <LanguageIcon fontSize='small'/>
-                             <p>Website: www.contact.com</p>
+                                 
+                             <p><LanguageIcon fontSize='small' sx={{paddingRight:"1rem"}}/> Website: www.contact.com</p>
                              </div>
 
                          </div>
