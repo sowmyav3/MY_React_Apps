@@ -31,10 +31,10 @@ function Register(props) {
 
 
     const Registerhandler = () => {
-        if (name!==" " || name!==""){
-            if(email!==" "|| email!==""){
-                if(password!==" "|| password!==""){
-                    if(repassword!==" "|| repassword!==""){
+        if (name !== " " || name !== "") {
+            if (email !== " " || email !== "") {
+                if (password !== " " || password !== "") {
+                    if (repassword !== " " || repassword !== "") {
                         setdisabled("false");
                     }
                 }
@@ -46,22 +46,14 @@ function Register(props) {
             if (disabled === "true") {
                 alert("Please fill all the details")
             }
-            if ((disabled === "false") &&(password==repassword)) {
+            if ((disabled === "false") && (password == repassword)) {
                 alert("user registered successfully")
             }
-            if ((disabled === "false") &&(password!==repassword)) {
+            if ((disabled === "false") && (password !== repassword)) {
                 alert("please fill passwords correctly")
             }
         }
     }
-    const Item = styled(Paper)(({ theme }) => ({
-        backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#CFE9FF',
-        ...theme.typography.body2,
-        padding: theme.spacing(1),
-        textAlign: 'center',
-        backgroundColor: "transparent",
-    }));
-
     return (
 
         <div className='registerpage'>
@@ -69,74 +61,76 @@ function Register(props) {
                 <span className='registerContent'>
                     REGISTRATION PAGE
                 </span>
-                <Grid
-                    container
-                    sx={{marginTop:"14rem", marginLeft:"54rem"}}
+                <Paper
+                    elevation={6}
+                    sx={{
+                        marginTop: "15rem",
+                        marginLeft: "38rem",
+                        textAlign: 'center',
+                        backgroundColor: "transparent",
+                        border: "none",
+                        borderRadius: "none",
+                        boxShadow: "none"
+                    }}
+
                 >
-                    <Grid item >
-                        <Item>
-                            <div>
-                            <div>
-                                    <span className='register-text1'>Name:</span>
+                    <div>
+                        <span className='register-text1'>Name:</span>
 
-                                    <TextField
-                                        required
-                                        id="filled-required"
-                                        placeholder='enter your full name'
-                                        onChange={namehandleChange} 
-                                        value={name}
-                                        
-                                    />
-                                </div>
-                                <br />
-                                <div>
-                                    <span className='register-text1'>Email:</span>
+                        <TextField
+                            required
+                            id="filled-required"
+                            placeholder='enter your full name'
+                            onChange={namehandleChange}
+                            value={name}
 
-                                    <TextField
-                                        required
-                                        id="filled-required"
-                                        onChange={emailhandleChange} 
-                                        value={email}
-                                    />
-                                </div>
-                                <br />
-                                <div>
-                                    <span className='register-text2'>Password:</span>
-                                    <TextField
-                                        required
-                                        id="filled-required"
-                                        type="password"
-                                        onChange={PasswordhandleChange} 
-                                        value={password}
-                                    />
-                                </div>
-                                <br />
-                                <div>
-                                    <span className='register-text2'>Password:</span>
-                                    <TextField
-                                        required
-                                        id="filled-required"
-                                        type="password"
-                                        placeholder='enter password again'
-                                        onChange={RePasswordhandleChange} 
-                                        value={repassword}
-                                    />
-                                </div>
-                                <Button sx={{ backgroundColor: "#095996", border: "2", margin: "17px", color: "white", width: "95px", marginLeft: "272px" }}
-                                    type="submit" 
-                                    onClick={Registerhandler}
-                                    >REGISTER</Button>
-                                <br/>
-                                <span className='register-user'>Already have an account :
-                                    <Link to="/login" className='register-log'>
-                                        Login
-                                    </Link>
-                                </span>
-                            </div>
-                        </Item>
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <span className='register-text1'>Email:</span>
 
-                    </Grid>
-                </Grid>
+                        <TextField
+                            required
+                            id="filled-required"
+                            onChange={emailhandleChange}
+                            value={email}
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <span className='register-text2'>Password:</span>
+                        <TextField
+                            required
+                            id="filled-required"
+                            type="password"
+                            onChange={PasswordhandleChange}
+                            value={password}
+                        />
+                    </div>
+                    <br />
+                    <div>
+                        <span className='register-text2'>Password:</span>
+                        <TextField
+                            required
+                            id="filled-required"
+                            type="password"
+                            placeholder='enter password again'
+                            onChange={RePasswordhandleChange}
+                            value={repassword}
+                        />
+                    </div>
+                    <Button sx={{ backgroundColor: "#095996", border: "2", margin: "17px", color: "white", width: "95px", marginLeft: "272px" }}
+                        type="submit"
+                        onClick={Registerhandler}
+                    >REGISTER</Button>
+                    <br />
+                    <span className='register-user'>Already have an account :
+                        <Link to="/login" className='register-log'>
+                            Login
+                        </Link>
+                    </span>
+                </Paper>
             </div>
         </div >
     );

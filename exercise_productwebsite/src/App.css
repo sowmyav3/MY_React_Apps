@@ -24,20 +24,22 @@
 }
 
 /*login*/
-.wrapper{
+.wrapper {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
 .login {
   width: 300px;
-  padding:20px;
-  height:min-content;
+  padding: 20px;
+  height: min-content;
   border-radius: 5px;
   color: black;
   background-color: aliceblue;
 }
+
 .loginpage {
   background-image: url("../public/Assets/Login.jpg");
   background-repeat: no-repeat;
@@ -63,22 +65,26 @@
   font-size: 22px;
   padding-right: 44px;
 }
-.login-forgottext{
+
+.login-forgottext {
   color: #4CC8E4;
   font-size: 19px;
   text-decoration: none;
   margin-left: 14rem;
 }
-.login-user{
+
+.login-user {
   color: white;
   font-size: 19px;
   margin-left: 13rem;
 }
-.login-reg{
+
+.login-reg {
   color: #4CC8E4;
   font-size: 19px;
   text-decoration: none;
 }
+
 /*header*/
 .logo-img {
   width: 67px;
@@ -93,26 +99,30 @@
   color: #C708CB;
   padding-left: 8px;
 }
+
 /*Register*/
-.wrapper{
+.wrapper {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
 .register {
   width: 300px;
-  padding:20px;
-  height:min-content;
+  padding: 20px;
+  height: min-content;
   border-radius: 5px;
   color: black;
   background-color: aliceblue;
 }
-.registerpage{
+
+.registerpage {
   background-image: url("../public/Assets/Registration.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .registerContent {
   color: white;
   font-size: 26px;
@@ -131,42 +141,66 @@
   font-size: 22px;
   padding-right: 44px;
 }
-.register-user{
+
+.register-user {
   color: white;
   font-size: 19px;
   margin-left: 5rem;
 }
-.register-log{
+
+.register-log {
   color: #4CC8E4;
   font-size: 19px;
   text-decoration: none;
 }
 
 /*contact*/
-.wrapper{
+.wrapper {
   height: 100vh;
   width: 100vw;
   overflow-x: hidden;
   overflow-y: hidden;
 }
+
 .contact {
   width: 300px;
-  padding:20px;
-  height:min-content;
+  padding: 20px;
+  height: min-content;
   border-radius: 5px;
   color: black;
   background-color: aliceblue;
 }
+
 .contactpage {
   background-image: url("../public/Assets/Contact/Contactus.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.contact-content1{
+.contact-content1 {
   font-size: 36px;
   color: black;
   padding-left: 1rem;
+}
+
+.contact-text1 {
+  color: black;
+  font-size: 25px;
+  padding-left: 3rem;
+  padding-right: 97px;
+}
+
+.contact-text2 {
+  color: black;
+  font-size: 25px;
+  padding-left: 3rem;
+  padding-right: 32px;
+}
+.contact-text3 {
+  color: black;
+  font-size: 25px;
+  padding-left: 3rem;
+  padding-right: 67px;
 }
 
 
