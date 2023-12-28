@@ -5,7 +5,7 @@ import Product from './Components/Product';
 import Contact from './Components/Contact';
 import Login from './Components/Login';
 import Register from './Components/Register';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 import Header from "./Components/Header";
 
 

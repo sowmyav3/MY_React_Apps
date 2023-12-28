@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import './Contact.css';
+
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
