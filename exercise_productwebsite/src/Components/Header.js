@@ -109,8 +109,9 @@ export default function Header() {
                             inputProps={{ 'aria-label': 'search' }}
                         />
                     </Search>
-                    <ShoppingCartIcon sx={{ marginLeft: "40px", marginRight:"4px", color:"black"}} >Cart</ShoppingCartIcon>
-                    <TitleIcon sx={{paddingRight:"11px", fontSize:"1rem", color:"black"}}>Cart</TitleIcon>
+                    <ShoppingCartIcon sx={{ marginLeft: "40px", marginRight:"4px", color:"black"}} />
+                    <span style={{color:"black", marginRight:"10px"}}>Cart</span>
+                    {/* <TitleIcon sx={{paddingRight:"11px", fontSize:"1rem", color:"black"}}>Cart</TitleIcon> */}
                     <Box sx={{ display: { xs: "none", sm: "flex" }}}>
                         {navItems.map((item) => (
                             <Button key={item} style={{ marginRight: "7px", color:"black" }} variant="outlined" size="small" sx={{ color: "inherit" }} onClick={() => handleNavItemClick(item)}>
