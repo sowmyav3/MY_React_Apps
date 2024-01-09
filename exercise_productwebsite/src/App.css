@@ -154,6 +154,23 @@
   text-decoration: none;
 }
 
+/* const Wrapper = styled(Box)(({ theme }) => ({
+  background: "#1976d2",
+  height: "100vh",
+  [theme.breakpoints.down("md")]: {
+    background: "orange",
+  },
+  [theme.breakpoints.down("sm")]: {
+    background: "blue",
+  },
+  [theme.breakpoints.up("lg")]: {
+    background: "purple",
+  },
+})); */
+
+
+
+
 /*contact*/
 .wrapper {
   height: 100vh;
