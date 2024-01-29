@@ -42,25 +42,40 @@ export default function ProductOffer() {
   };
   
   return (
-    <div style={{ width: '75%', margin: 'auto' }}>
-      <div style={{ marginTop: "20px" }}>
-        <Slider {...settings}>
+    // <div style={{ width: '75%', margin: 'auto' }}>
+    //   <div style={{ marginTop: "20px" }}>
+    //     <Slider {...settings}>
 
-          {items.map((d) => (
-            <div key={d.id} style={{ backgroundColor:"", height: '350px', color: 'black', borderRadius: '1rem', borderColor:"black" }}>
-              <div style={{ height: '250px', backgroundColor: '#33ffff', display: 'flex', justifyContent: 'center', alignItems: 'center', borderTopLeftRadius: '1rem',borderTopRightRadius: '1rem' }}>
-                <img src={d.image} alt={d.Name} style={{ height: "120px", width: "100px" }}></img>
-              </div>
-              <div className='flex flex-col items-center justify-center gap-4 p-4' style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "4px", padding: "4px" }}>
-                <p style={{ fontSize: '1.25rem', fontWeight: '600' }}>{d.Name}</p>
-                <p style={{ textAlign: 'center' }}>{d.price}</p>
+    //       {items.map((d) => (
+    //         <div key={d.id} style={{ backgroundColor:"", height: '280px', color: 'black', border: '1px black solid' }}>
+    //           <div style={{ height: '220px', borderBottom:"1px black solid", backgroundColor: '#33ffff', display: 'flex', justifyContent: 'center', alignItems: 'center', borderTopLeftRadius: '1rem',borderTopRightRadius: '1rem' }}>
+    //             <img src={d.image} alt={d.Name} style={{ height: "200px", width: "200px" }}></img>
+    //           </div>
+    //           <div className='flex flex-col items-center justify-center gap-4 p-4' style={{ backgroundColor:"aqua", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "4px", padding: "4px",borderBottomLeftRadius: '1rem',borderBottomRightRadius: '1rem' }}>
+    //             <p style={{ fontSize: '1.25rem', fontWeight: '600' }}>{d.Name}</p>
+    //             <p style={{ textAlign: 'center' }}>{d.price}</p>
 
-              </div>
+    //           </div>
+    //         </div>
+
+    //       ))}
+    //     </Slider>
+    //   </div>
+    // </div>
+    <div className="product-offer-container">
+      <Slider {...settings}>
+        {items.map((d) => (
+          <div key={d.id} className="product-card">
+            <div className="card-image">
+              <img src={d.image} alt={d.Name} />
             </div>
-
-          ))}
-        </Slider>
-      </div>
+            <div className="card-details">
+              <p className="card-title">{d.Name}</p>
+              <p className="card-price">{d.price}</p>
+            </div>
+          </div>
+        ))}
+      </Slider>
     </div>
   )
 }
