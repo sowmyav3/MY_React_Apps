@@ -10,7 +10,7 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
-
+import ProductOffer from './Homesubcomponents/ProductOffer';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const images = [
@@ -140,7 +140,10 @@ function Home(props) {
 
 
             </div>
-
+            {/* offer on products */}
+            <div>
+            <ProductOffer></ProductOffer>
+            </div>
             {/*  scroll cards */}
 
             
@@ -152,3 +155,44 @@ function Home(props) {
 export default Home;
 
 
+
+
+
+// import { useEffect, useState } from "react";
+// import "./styles.css";
+// import axios from "axios";
+
+// export default function App() {
+// const [data, setData] = useState(null);
+
+// useEffect(() => {
+// const fetchData = async () => {
+// try {
+// const response = await axios.get(`https://fakestoreapi.com/products`);
+// setData(response.data);
+// console.log(response.data);
+// } catch (error) {
+// console.error("Error Occured", error);
+// }
+// };
+// fetchData();
+// }, []);
+// return (
+// <div>
+// {data && (
+// <ul>
+// {data.map((item) => (
+// <li key={item.id}>
+// <h3>{item.category}</h3>
+// <img
+// src={item.image}
+// style={{ height: "60px", width: "60px" }}
+// ></img>
+// </li>
+// ))}
+// //{" "}
+// </ul>
+// )}
+// </div>
+// );
+// }
