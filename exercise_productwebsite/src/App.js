@@ -7,6 +7,7 @@ import Login from './Components/Login';
 import Register from './Components/Register';
 
 import Header from "./Components/Header";
+import Footer from "./Components/Footer";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="/register" Component={Register}></Route>
       </Routes>
       
+      <Footer/>
     </div>
   );
 }

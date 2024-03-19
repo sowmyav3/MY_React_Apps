@@ -13,7 +13,7 @@ export const proOffer=[    {
         desc:"Havells HD3181 1600 Watts Unisex Foldable Hair Dryer; 3 Heat (Hot/Warm/Cold) Settings including Cool Shot Button; Heat Balance Technology (Black)",
         price: 2000,
         discountprice: 1399,
-        discountpercent: "30%,",
+        discountpercent: "30%",
         image: "./Assets/Home/ProductOffer/Offpro2.jpg" ,
        },
        {

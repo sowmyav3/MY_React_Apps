@@ -31,9 +31,13 @@ const images = [
         imgPath: './Assets/Home/Homebanner4.jpg',
     },
     {
-        label: '5thoffer',
+        label: 'bathwashes',
         imgPath: './Assets/Home/Homebanner5.jpg',
-    }
+    },
+    {
+        label: 'watch',
+        imgPath: './Assets/Home/Homebanner6.jpg',
+    },
 ];
 
 function Home(props) {

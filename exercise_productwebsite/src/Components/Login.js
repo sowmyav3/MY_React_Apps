@@ -20,7 +20,7 @@ function Login() {
     };
 
     const loginhandler = () => {
-        if (email !== " " || email !== "") {
+        if (email !== " " || email !== ""||email !== "NULL" ) {
             if (password !== " " || password !== "") {
                 setdisabled("false")
             }
