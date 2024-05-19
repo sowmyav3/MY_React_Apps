@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { Box, InputBase, Button, styled, colors } from '@mui/material';
 import { getWeather } from '../Services/dataApi';
-import { BorderOuter, Height, Margin } from '@mui/icons-material';
 import './Form.css';
+
+
 const Container = styled(Box)({
     background: '#FBBF77',
     padding: 10,
@@ -12,20 +13,22 @@ const Input = styled(InputBase)({
     color: 'black',
     marginRight: 20,
     fontSize: 18,
+    border: '1px solid black',
 });
 
 const GetButton = styled(Button)({
     background: '#FBBF77',
     color: 'black',
+    border: '1px solid black',
     '&:hover': {
         color: 'white',
         border: '1px solid black',
         background: '#ed8c17',
-      },
+    },
 })
 
 
-export default function Form({ setResult }) {
+export default function Form({ setResult}) {
     const [data, setData] = useState({ city: '', country: '' })
 
     const handleChange = (e) => {
@@ -33,21 +36,30 @@ export default function Form({ setResult }) {
     }
 
     const getWeatherInfo = async () => {
-        let response = await getWeather(data.city, data.country);
-        setResult(response);
+        // let response = await getWeather(data.city, data.country);
+        // setResult(response);
+        try {
+            if (!data.city) {
+                throw new Error("Please enter city");
+            }
+            let response = await getWeather(data.city, data.country);
+            setResult(response);
+        } catch (error) {
+            console.error(error.message);
+        }
     }
 
     return (
         <Container>
             <Input
                 id="myInputhold"
-                placeholder="City"
+                placeholder="Enter City"
                 onChange={(e) => handleChange(e)}
                 name="city"
             />
             <Input
                 id="myInputhold"
-                placeholder="Country"
+                placeholder="Enter Country"
                 onChange={(e) => handleChange(e)}
                 name="Country"
             />

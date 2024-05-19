@@ -1,27 +1,27 @@
 import React, { useState } from 'react'
 import {Box, styled} from '@mui/material';
-import Sunset from '../Assets/bg_home.jpg';
-import Form from '../Components/Form';
-import Information from '../Components/Information';
-
+import eventimg from '../../Assets/bg_eventplanner.jpg';
+import Form from '../../Components/Form';
+import Information from '../../Components/Information';
 const Component = styled(Box)({
     height:'100vh',
     display: 'flex',
     alignItems: 'center',
     margin: '0 auto',
     width: '65%',
-})
-
-const Image = styled(Box)({
-    backgroundImage: `url(${Sunset})`,
+  })
+  
+  const Image = styled(Box)({
+    backgroundImage: `url(${eventimg})`,
     width: '30%',
     height: '90%',
     backgroundSize: 'cover',
     borderRadius: '20px 0 0 20px'
-})
-const  path="home";
- const Home=()=> {
-    const [result,setResult] = useState({});
+  })
+  const  path="eventPlan";
+
+export default function EventPlans() {
+  const [result,setResult] = useState({});
   return (
     <Component>
         <Image/>
@@ -32,5 +32,3 @@ const  path="home";
     </Component>
   )
 }
-
-export default Home;

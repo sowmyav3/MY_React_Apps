@@ -18,7 +18,7 @@ const Error = styled(Typography)({
 })
 
 
-export default function Information({ result }) {
+export default function Information({ result, path }) {
     return (
         result && Object.keys(result).length > 0 ?
             <Box style={{ margin: '30px 60px' }}>
@@ -29,6 +29,9 @@ export default function Information({ result }) {
                 <Row><Brightness6 />Sun Set: {new Date(result.sys.sunset * 1000).toLocaleTimeString()}</Row>
                 <Row><Dehaze />Humidity: {result.weather[0].main}</Row>
                 <Row><Cloud />Clouds: {result.clouds.all}%</Row>
+                {path === "eventPlan" && <p>Event Planning</p>}
+                {path === "farmer" && <p>farmer</p>}
+                {path === "travel" && <p>travel</p>}
             </Box>
             : <Error>Please enter the values to check weather</Error>
     )
