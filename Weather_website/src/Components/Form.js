@@ -35,17 +35,17 @@ export default function Form({ setResult}) {
         setData({ ...data, [e.target.name]: e.target.value });
     }
 
+    const [err,setErr]=('');
+
     const getWeatherInfo = async () => {
-        // let response = await getWeather(data.city, data.country);
-        // setResult(response);
         try {
-            if (!data.city) {
+            if (!data.city ) {
                 throw new Error("Please enter city");
             }
             let response = await getWeather(data.city, data.country);
             setResult(response);
         } catch (error) {
-            console.error(error.message);
+            alert("Please Enter city");
         }
     }
 

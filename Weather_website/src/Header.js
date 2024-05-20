@@ -10,6 +10,7 @@ import MenuItem from '@mui/joy/MenuItem';
 import { useNavigate } from "react-router-dom";
 import './App'
 import './App.css'
+import Home from './Pages/Home'
 
 export default function Header() {
 
@@ -21,36 +22,40 @@ export default function Header() {
     const [item, setItem] = useState("Home");
     let navigate = useNavigate();
 
+    
     const handleNavItemClick = (path) => {
         navigate(`/${path}`);
         setItem(path);
     };
 
     return (
-        <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
-                <Toolbar>
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-                    >
-                    <img onClick={() => { handleNavItemClick('home') }} className="logo-img" src="./weathericon.png" alt="Weather App" />
-                    Weather App
-                    </Typography>
-                    <Dropdown open={open} onOpenChange={handleOpenChange}>
-                        <MenuButton>{item}</MenuButton>
-                        <Menu>
-                            <MenuItem onClick={() => handleNavItemClick('home')
-                            }>Home</MenuItem>
-                            <MenuItem onClick={() => handleNavItemClick('eventPlan')}>Event Planners</MenuItem>
-                            <MenuItem onClick={() => handleNavItemClick('farmer')}>Farmers</MenuItem>
-                            <MenuItem onClick={() => handleNavItemClick('travel')}>Travellers</MenuItem>
-                        </Menu>
-                    </Dropdown>
-                </Toolbar>
-            </AppBar>
-        </Box>
+        <>
+            <Box sx={{ flexGrow: 1 }}>
+                <AppBar position="static">
+                    <Toolbar>
+                        <Typography
+                            variant="h6"
+                            noWrap
+                            component="div"
+                            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        >
+                            <img onClick={() => { handleNavItemClick('home') }} className="logo-img" src="./weathericon.png" alt="Weather App" />
+                            Weather App
+                        </Typography>
+                        <Dropdown open={open} onOpenChange={handleOpenChange}>
+                            <MenuButton>{item}</MenuButton>
+                            <Menu>
+                                <MenuItem onClick={() => handleNavItemClick('home')}>Home</MenuItem>
+                                <MenuItem onClick={() => handleNavItemClick('eventPlan')}>Event Planners</MenuItem>
+                                <MenuItem onClick={() => handleNavItemClick('farmer')}>Farmers</MenuItem>
+                                <MenuItem onClick={() => handleNavItemClick('travel')}>Travellers</MenuItem>
+                            </Menu>
+                        </Dropdown>
+                    </Toolbar>
+                </AppBar>
+                {item === "Home" && <Home/>}
+            </Box>
+        </>
+
     )
 }
