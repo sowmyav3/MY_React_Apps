@@ -69,6 +69,7 @@ export default function Form({ setResult}) {
             >
                 Get weather
             </GetButton>
+            
         </Container>
     )
 }

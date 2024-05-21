@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 import './App'
 import './App.css'
 import Home from './Pages/Home'
+import { Opacity } from '@mui/icons-material';
 
 export default function Header() {
 
@@ -19,15 +20,15 @@ export default function Header() {
     const handleOpenChange = React.useCallback((event, isOpen) => {
         setOpen(isOpen);
     }, []);
-    const [item, setItem] = useState("Home");
+    // const [item, setItem] = useState('home');
+    const [item, setItem] = useState('');
     let navigate = useNavigate();
 
-    
     const handleNavItemClick = (path) => {
         navigate(`/${path}`);
         setItem(path);
     };
-
+    console.log(item)
     return (
         <>
             <Box sx={{ flexGrow: 1 }}>
@@ -39,13 +40,15 @@ export default function Header() {
                             component="div"
                             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
                         >
-                            <img onClick={() => { handleNavItemClick('home') }} className="logo-img" src="./weathericon.png" alt="Weather App" />
+                            <img onClick={() => { handleNavItemClick('') }} className="logo-img" src="./weathericon.png" alt="Weather App" />
                             Weather App
                         </Typography>
                         <Dropdown open={open} onOpenChange={handleOpenChange}>
-                            <MenuButton>{item}</MenuButton>
+                            <MenuButton style={{fontWeight:'bold',fontSize:'17px'}}>
+                                {item === '' ?<>Users</>:<>{item}</>}
+                                </MenuButton>
                             <Menu>
-                                <MenuItem onClick={() => handleNavItemClick('home')}>Home</MenuItem>
+                                {/* <MenuItem onClick={() => handleNavItemClick('')}>Home</MenuItem> */}
                                 <MenuItem onClick={() => handleNavItemClick('eventPlan')}>Event Planners</MenuItem>
                                 <MenuItem onClick={() => handleNavItemClick('farmer')}>Farmers</MenuItem>
                                 <MenuItem onClick={() => handleNavItemClick('travel')}>Travellers</MenuItem>
@@ -53,7 +56,7 @@ export default function Header() {
                         </Dropdown>
                     </Toolbar>
                 </AppBar>
-                {item === "Home" && <Home/>}
+                {/* {item === '' && <Home/>} */}
             </Box>
         </>
 

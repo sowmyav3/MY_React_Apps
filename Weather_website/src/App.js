@@ -9,9 +9,10 @@ import EventPlans from './Users/EventPlanners/EventPlans';
 function App() {
   return (
     <>
-      <Header/>
+      <Header />
       <Routes>
-        <Route exact path="/home" Component={Home}></Route>
+        {/* <Route exact path="/" component={Header}/> */}
+        <Route path="/" Component={Home}></Route>
         <Route path="/eventPlan" Component={EventPlans}></Route>
         <Route path="/farmer" Component={Farmers}></Route>
         <Route path="/travel" Component={Travels}></Route>
